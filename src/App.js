@@ -1,16 +1,15 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './styles.scss';
-import { HomePage } from './components/HomePage/HomePage';
-import { AddEmployee } from './components/AddEmployee/AddEmployee';
-import { GlobalProvider } from './context/GlobalState';
+import { HomePage } from './components/HomePage';
 
 function App() {
+  
   return (
-    <main>
-      <GlobalProvider>
+    <Router>
+      <main>
         <HomePage />
-        <AddEmployee />
-      </GlobalProvider>
-    </main>
+      </main>
+    </Router>
   );
 }
 
